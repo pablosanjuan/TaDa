@@ -1,0 +1,86 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.7.1
+-- http://www.phpmyadmin.net
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 19-11-2014 a las 20:20:51
+-- Versión del servidor: 5.6.20
+-- Versión de PHP: 5.5.15
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de datos: `tada`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `notatexto`
+--
+
+CREATE TABLE IF NOT EXISTS `notatexto` (
+  `hora` varchar(20) NOT NULL,
+  `fecha` varchar(20) NOT NULL,
+  `latitud` varchar(30) NOT NULL,
+  `longitud` varchar(30) NOT NULL,
+  `nota` varchar(50) NOT NULL,
+  `categoria` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `notatexto`
+--
+
+INSERT INTO `notatexto` (`hora`, `fecha`, `latitud`, `longitud`, `nota`, `categoria`) VALUES
+('12:00:29', '19-nov-2014', '2.4504504504504503', '-76.6105955552739', 'hjhj', 'hola'),
+('17:38:08', '18-nov-2014', '2.4504504504504503', '-76.5925610459624', 'hsks', 'hola');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `username` varchar(20) NOT NULL,
+  `passw` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`username`, `passw`) VALUES
+('a', 'a'),
+('felbo', '123'),
+('jsks', 'ffs'),
+('polo', 'polo'),
+('q', 'q');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `notatexto`
+--
+ALTER TABLE `notatexto`
+ ADD PRIMARY KEY (`hora`);
+
+--
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+ ADD PRIMARY KEY (`username`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
